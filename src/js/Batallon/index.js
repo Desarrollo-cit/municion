@@ -382,6 +382,7 @@ const buscarSalidaFab1 = async (evento) => {
       method: "GET",
     };
 
+    
     const respuesta = await fetch(url, config);
     const data = await respuesta.json();
     //console.log(data);

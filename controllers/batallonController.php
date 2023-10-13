@@ -33,7 +33,7 @@ class batallonController
         $compañia = batallon::fetchArray("SELECT * FROM municion_organizacion WHERE id_dependencia = $org_dep and jerarquia between 110 and 115 and situacion = 1");
 
 
-        $router->render('batallon/index', [
+        $router->render('Batallon/index', [
 
             'lote' => $lote,
             'calibre' => $calibre,
@@ -560,11 +560,11 @@ class batallonController
 
                     $asignadoHistorial = batallon::sql("INSERT INTO municion_batallon VALUES (0, $lote, $calibre, $cantidad2, $motivo, '$documento', '$observaciones', 5, '$fecha', $idcomando, $batallon, $catalogo, $catalogotraslado, 5)");
 
-                    
+
                     $asignadoHistorialComando = batallon::sql("INSERT INTO municion_almacencomando VALUES (0, $lote, $calibre, $cantidad2, $motivo, '$documento', '$observaciones', 5, '$fecha', $idcomando, $catalogo, $catalogotraslado, 5)");
-                    
+
                     $asignadoHistorialEntrada = batallon::sql("INSERT INTO municion_almacencomando VALUES (0, $lote, $calibre, $cantidad2, $motivo, '$documento', '$observaciones', 2, '$fecha', $idcomando, $catalogo, $catalogotraslado, 5)");
-                    
+
                     $asignadoHistorialEntradaComando = "INSERT INTO municion_almacencomando VALUES (0, $lote, $calibre, $cantidad2, $motivo, '$documento', '$observaciones', 2, '$fecha', $idcomando, $catalogo, $catalogotraslado, 1)";
 
                     // echo json_encode($asignadoHistorial);
@@ -605,7 +605,7 @@ class batallonController
 
 
                     $resultado1234 = batallon::sql($asignadoHistorialEntradaComando);
-                   
+
 
                     // echo json_encode($resultado1234);
                     // exit;

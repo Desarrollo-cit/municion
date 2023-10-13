@@ -2,6 +2,7 @@
     <div class="col">
         <h3>ALMACEN DE MUNICIÓN DEL BATALLON
             <?= $dependencia ?>
+       
         </h3>
     </div>
     <input type="hidden" id="iddependencia" value="<?= $org_dep ?>">
@@ -61,8 +62,8 @@
 
                             </a> -->
                             <a type=" button" class="btn btn-secondary m-1" id="BtnAsignarmunicion"
-                                name="BtnAsignarmunicion" data-bs-toggle="modal"
-                                data-bs-target="#asignadoAlmacen">Vista de Municion
+                                name="BtnAsignarmunicion" data-bs-toggle="modal" data-bs-target="#asignadoAlmacen">Vista
+                                de Municion
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                                     class="bi bi-calendar4-week" viewBox="0 0 16 16">
                                     <path
@@ -429,7 +430,8 @@
                                 LOTE
                             </label>
                             <input type="hidden" id="idlote1" name="idlote1" class="form-control" required readonly>
-                            <input type="text" id="lote1" name="lote1" class="form-control text-center" required readonly>
+                            <input type="text" id="lote1" name="lote1" class="form-control text-center" required
+                                readonly>
 
                         </div>
                         <div class='col-lg-4'>
@@ -438,13 +440,15 @@
                             </label>
                             <input type="hidden" id="idcalibre1" name="idcalibre1" class="form-control" required
                                 readonly>
-                            <input type="text" id="calibre1" name="calibre1" class="form-control text-center" required readonly>
+                            <input type="text" id="calibre1" name="calibre1" class="form-control text-center" required
+                                readonly>
                         </div>
                         <div class='col-lg-4'>
                             <label for="cantidad">
                                 CANTIDAD ACTUAL
                             </label>
-                            <input type="text" id="cantidad1" name="cantidad1" class="form-control text-center" required readonly>
+                            <input type="text" id="cantidad1" name="cantidad1" class="form-control text-center" required
+                                readonly>
 
                         </div>
                     </div>
@@ -454,7 +458,8 @@
                                 MOTIVO
                             </label>
                             <input type="hidden" id="idmotivo1" name="idmotivo1" class="form-control" required readonly>
-                            <input type="text" id="motivo1" name="motivo1" class="form-control text-center" required readonly>
+                            <input type="text" id="motivo1" name="motivo1" class="form-control text-center" required
+                                readonly>
 
                         </div>
                         <div class="col-lg-8">
@@ -467,7 +472,8 @@
                     <div class="row mb-3">
                         <div class="col-lg-12">
                             <label for="observaciones1">OBSERVACIONES DE MUNICION</label>
-                            <textarea type="tex" name="observaciones1" id="observaciones1" class="form-control text-center" rows="3"
+                            <textarea type="tex" name="observaciones1" id="observaciones1"
+                                class="form-control text-center" rows="3"
                                 onKeyUp="document.getElementById(this.id).value=document.getElementById(this.id).value.toUpperCase()"
                                 readonly></textarea>
                         </div>
@@ -481,7 +487,8 @@
                         </div>
                         <div class='col-lg-4'>
                             <label> CANTIDAD A ENVIAR </label>
-                            <input type="number" id="cantidadnew1" name="cantidadnew1" class="form-control text-center" required>
+                            <input type="number" id="cantidadnew1" name="cantidadnew1" class="form-control text-center"
+                                required>
                         </div>
                         <div class="col-lg-4">
                             <label for="catalogo">CATALOGO</label>
@@ -523,8 +530,8 @@
             <div class="modal-body ">
 
 
-            <form class="badge-light p-1 was-validated text-center" id="formdatosTablaRegreso">
-                    <input type="text" name="id1" id="id1">
+                <form class="badge-light p-1 was-validated text-center" id="formdatosTablaRegreso">
+                    <input type="hidden" name="id1" id="id1">
                     <input type="hidden" name="catalogo1" id="catalogo1">
                     <input type="hidden" name="departamento1" id="departamento1">
                     <input type="hidden" name="batallon1" id="batallon1">
@@ -534,7 +541,8 @@
                                 LOTE
                             </label>
                             <input type="hidden" id="idlote1" name="idlote1" class="form-control" required readonly>
-                            <input type="text" id="lote1" name="lote1" class="form-control text-center" required readonly>
+                            <input type="text" id="lote1" name="lote1" class="form-control text-center" required
+                                readonly>
 
                         </div>
                         <div class='col-lg-4'>
@@ -543,13 +551,15 @@
                             </label>
                             <input type="hidden" id="idcalibre1" name="idcalibre1" class="form-control" required
                                 readonly>
-                            <input type="text" id="calibre1" name="calibre1" class="form-control text-center" required readonly>
+                            <input type="text" id="calibre1" name="calibre1" class="form-control text-center" required
+                                readonly>
                         </div>
                         <div class='col-lg-4'>
                             <label for="cantidad">
                                 CANTIDAD ACTUAL
                             </label>
-                            <input type="text" id="cantidad1" name="cantidad1" class="form-control text-center" required readonly>
+                            <input type="text" id="cantidad1" name="cantidad1" class="form-control text-center" required
+                                readonly>
 
                         </div>
                     </div>
@@ -558,23 +568,31 @@
                             <label for="motivo">
                                 MOTIVO
                             </label>
-                            <input type="hidden" id="idmotivo1" name="idmotivo1" class="form-control" required readonly>
-                            <input type="text" id="motivo1" name="motivo1" class="form-control text-center" required readonly>
+                            <!-- <input type="text" id="idmotivo1" name="idmotivo1" class="form-control" required readonly> -->
+                            <input type="hidden" id="motivo1" name="motivo1" class="form-control text-center" required >
+                            <select class="form-control" name="idmotivo1" id="idmotivo1">
+                                <option>Seleccione ...</option>
+                                <?php foreach ($movimiento as $movimiento): ?>
+                                    <option value="<?= $movimiento['id'] ?>">
+                                        <?= $movimiento['descripcion'] ?>
+                                    </option>
+                                <?php endforeach ?>
 
+
+                            </select>
                         </div>
                         <div class="col-lg-8">
                             <label for="documento1">DOCUMENTO DE REFERENCIA</label>
                             <input type="text" name="documento1" id="documento1" class="form-control text-center"
-                                onKeyUp="document.getElementById(this.id).value=document.getElementById(this.id).value.toUpperCase()"
-                                readonly>
+                                onKeyUp="document.getElementById(this.id).value=document.getElementById(this.id).value.toUpperCase()">
                         </div>
                     </div>
                     <div class="row mb-3">
                         <div class="col-lg-12">
                             <label for="observaciones1">OBSERVACIONES DE MUNICION</label>
-                            <textarea type="tex" name="observaciones1" id="observaciones1" class="form-control text-center" rows="3"
-                                onKeyUp="document.getElementById(this.id).value=document.getElementById(this.id).value.toUpperCase()"
-                                readonly></textarea>
+                            <textarea type="tex" name="observaciones1" id="observaciones1"
+                                class="form-control text-center" rows="3"
+                                onKeyUp="document.getElementById(this.id).value=document.getElementById(this.id).value.toUpperCase()"></textarea>
                         </div>
                     </div>
                     <div class="row mb-3">
@@ -586,7 +604,8 @@
                         </div>
                         <div class='col-lg-4'>
                             <label> CANTIDAD A ENVIAR </label>
-                            <input type="number" id="cantidadnew1" name="cantidadnew1" class="form-control text-center" required>
+                            <input type="number" id="cantidadnew1" name="cantidadnew1" class="form-control text-center"
+                                required>
                         </div>
                         <div class="col-lg-4">
                             <label for="catalogo">CATALOGO</label>
@@ -626,7 +645,7 @@
             <div class="modal-body ">
 
 
-            <form class="badge-light p-1 was-validated text-center" id="formdatosTablaRegresoComando">
+                <form class="badge-light p-1 was-validated text-center" id="formdatosTablaRegresoComando">
                     <input type="hidden" name="id1" id="id1">
                     <input type="hidden" name="catalogo1" id="catalogo1">
                     <input type="hidden" name="departamento1" id="departamento1">
@@ -637,7 +656,8 @@
                                 LOTE
                             </label>
                             <input type="hidden" id="idlote1" name="idlote1" class="form-control" required readonly>
-                            <input type="text" id="lote1" name="lote1" class="form-control text-center" required readonly>
+                            <input type="text" id="lote1" name="lote1" class="form-control text-center" required
+                                readonly>
 
                         </div>
                         <div class='col-lg-4'>
@@ -646,13 +666,15 @@
                             </label>
                             <input type="hidden" id="idcalibre1" name="idcalibre1" class="form-control" required
                                 readonly>
-                            <input type="text" id="calibre1" name="calibre1" class="form-control text-center" required readonly>
+                            <input type="text" id="calibre1" name="calibre1" class="form-control text-center" required
+                                readonly>
                         </div>
                         <div class='col-lg-4'>
                             <label for="cantidad">
                                 CANTIDAD ACTUAL
                             </label>
-                            <input type="text" id="cantidad1" name="cantidad1" class="form-control text-center" required readonly>
+                            <input type="text" id="cantidad1" name="cantidad1" class="form-control text-center" required
+                                readonly>
 
                         </div>
                     </div>
@@ -662,7 +684,8 @@
                                 MOTIVO
                             </label>
                             <input type="hidden" id="idmotivo1" name="idmotivo1" class="form-control" required readonly>
-                            <input type="text" id="motivo1" name="motivo1" class="form-control text-center" required readonly>
+                            <input type="text" id="motivo1" name="motivo1" class="form-control text-center" required
+                                readonly>
 
                         </div>
                         <div class="col-lg-8">
@@ -675,7 +698,8 @@
                     <div class="row mb-3">
                         <div class="col-lg-12">
                             <label for="observaciones1">OBSERVACIONES DE MUNICION</label>
-                            <textarea type="tex" name="observaciones1" id="observaciones1" class="form-control text-center" rows="3"
+                            <textarea type="tex" name="observaciones1" id="observaciones1"
+                                class="form-control text-center" rows="3"
                                 onKeyUp="document.getElementById(this.id).value=document.getElementById(this.id).value.toUpperCase()"
                                 readonly></textarea>
                         </div>
@@ -683,13 +707,15 @@
                     <div class="row mb-3">
                         <div class="col-4">
                             <label for="select_movimiento">UNIDAD</label>
-                            <select class="form-control text-center" name="batallonSalidaComando" id="batallonSalidaComando" required>
+                            <select class="form-control text-center" name="batallonSalidaComando"
+                                id="batallonSalidaComando" required>
 
                             </select>
                         </div>
                         <div class='col-lg-4'>
                             <label> CANTIDAD A ENVIAR </label>
-                            <input type="number" id="cantidadnew1" name="cantidadnew1" class="form-control text-center" required>
+                            <input type="number" id="cantidadnew1" name="cantidadnew1" class="form-control text-center"
+                                required>
                         </div>
                         <div class="col-lg-4">
                             <label for="catalogo">CATALOGO</label>
@@ -701,7 +727,8 @@
 
                     <div class="row mb-3">
                         <div class="col">
-                            <button id="btnTrasladarComando" type="submit" class="btn btn-success w-100">Trasladar</button>
+                            <button id="btnTrasladarComando" type="submit"
+                                class="btn btn-success w-100">Trasladar</button>
                         </div>
 
                     </div>
@@ -797,11 +824,11 @@
                 </div>
                 <div class="modal-body">
                     <div class="container ">
-                        
-                            <div class=" text-center " id="cuadroSinoptico">
 
-                            </div>
-                       
+                        <div class=" text-center " id="cuadroSinoptico">
+
+                        </div>
+
                     </div>
 
 

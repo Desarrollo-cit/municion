@@ -8,7 +8,7 @@ use Exception;
 
 class AsignacionController
 {
-    public function index(Router $router)
+    public static function index(Router $router)
     {
 
 
@@ -47,7 +47,7 @@ class AsignacionController
     }
 
 
-    public function buscarComando()
+    public static function buscarComando()
     {
         // getHeadersApi();
 

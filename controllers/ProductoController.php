@@ -6,12 +6,12 @@ use Model\Producto;
 use MVC\Router;
 class ProductoController{
 
-    public function index(Router $router)
+    public static function index(Router $router)
     {
         $router->render('productos/index');
     }
 
-    public function guardarAPI(){
+    public static function guardarAPI(){
         getHeadersApi();
         $producto = new Producto($_POST);
         
@@ -30,13 +30,13 @@ class ProductoController{
         }
     }
 
-    public function buscarAPI(){
+    public static function buscarAPI(){
         getHeadersApi();
         $productos = Producto::where('situacion', '1');
         echo json_encode($productos);
     }
 
-    public function modificarAPI(){
+    public static function modificarAPI(){
         getHeadersApi();
         $producto = new Producto($_POST);
         
@@ -55,7 +55,7 @@ class ProductoController{
         }
     }
 
-    public function eliminarAPI(){
+    public static function eliminarAPI(){
         getHeadersApi();
         $_POST['situacion'] = 0;
         $producto = new Producto($_POST);

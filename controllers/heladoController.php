@@ -9,12 +9,12 @@ use Exception;
 class heladoController
 {
 
-    public function index(Router $router)
+    public static function index(Router $router)
     {
         $router->render('helado/index');
     }
 
-    public function guardarAPI()
+    public static function guardarAPI()
     {
         getHeadersApi();
 
@@ -49,7 +49,7 @@ class heladoController
 
     }
 
-    public function buscarAPI()
+    public static function buscarAPI()
     {
         getHeadersApi();
 
@@ -71,7 +71,7 @@ class heladoController
 
     }
 
-    public function modificarAPI()
+    public static function modificarAPI()
     {
         getHeadersApi();
         $helado = new helado($_POST);
@@ -91,7 +91,7 @@ class heladoController
         }
     }
 
-    public function eliminarAPI()
+    public static function eliminarAPI()
     {
         getHeadersApi();
         $_POST['situacion'] = 0;

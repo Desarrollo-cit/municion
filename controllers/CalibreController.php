@@ -9,12 +9,12 @@ use Exception;
 class CalibreController
 {
 
-    public function index(Router $router)
+    public static function index(Router $router)
     {
         $router->render('Calibre/index');
     }
 
-    public function guardarAPI()
+    public static function guardarAPI()
     {
         getHeadersApi();
 
@@ -49,7 +49,7 @@ class CalibreController
 
     }
 
-    public function buscarAPI()
+    public static function buscarAPI()
     {
         getHeadersApi();
 
@@ -71,7 +71,7 @@ class CalibreController
 
     }
 
-    public function modificarAPI()
+    public static function modificarAPI()
     {
         getHeadersApi();
         $Calibre = new Calibre($_POST);
@@ -92,7 +92,7 @@ class CalibreController
     }
 
     
-    public function eliminarAPI()
+    public static function eliminarAPI()
     {
         getHeadersApi();
         $_POST['situacion'] = 0;

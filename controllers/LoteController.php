@@ -9,12 +9,12 @@ use Exception;
 class LoteController
 {
 
-    public function index(Router $router)
+    public static function index(Router $router)
     {
         $router->render('Lote/index');
     }
 
-    public function guardarAPI()
+    public static function guardarAPI()
     {
         getHeadersApi();
 
@@ -49,7 +49,7 @@ class LoteController
 
     }
 
-    public function buscarAPI()
+    public static function buscarAPI()
     {
         getHeadersApi();
 
@@ -71,7 +71,7 @@ class LoteController
 
     }
 
-    public function modificarAPI()
+    public static function modificarAPI()
     {
         getHeadersApi();
         $Lote = new Lote($_POST);
@@ -91,7 +91,7 @@ class LoteController
         }
     }
 
-    public function eliminarAPI()
+    public static function eliminarAPI()
     {
         getHeadersApi();
         $_POST['situacion'] = 0;

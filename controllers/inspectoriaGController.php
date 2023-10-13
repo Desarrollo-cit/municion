@@ -10,7 +10,7 @@ use Exception;
 
 class inspectoriaGController
 {
-      public function index(Router $router)
+      public static function index(Router $router)
     {
         $comando = inspectoriaG::fetchArray("SELECT * FROM mdep where dep_llave between 2010 and 4030 order by dep_desc_md asc;");
 
@@ -25,7 +25,7 @@ class inspectoriaGController
 
     }
 
-    public function buscarSinoptico()
+    public static function buscarSinoptico()
     {
         getHeadersApi();
 

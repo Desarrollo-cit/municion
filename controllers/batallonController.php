@@ -11,7 +11,7 @@ use Exception;
 class batallonController
 {
 
-    public function index(Router $router)
+    public static function index(Router $router)
     {
         // $usuario = 606871;
         $lote = batallon::fetchArray("SELECT * FROM municion_lote WHERE situacion = 1");
@@ -47,7 +47,7 @@ class batallonController
 
     }
 
-    public function guardarAPI()
+    public static function guardarAPI()
     {
         getHeadersApi();
 
@@ -114,7 +114,7 @@ class batallonController
             ]);
         }
     }
-    public function guardarTraslado()
+    public static function guardarTraslado()
     {
         getHeadersApi();
 
@@ -219,7 +219,7 @@ class batallonController
             }
         }
     }
-    public function guardarTrasladoRegreso()
+    public static function guardarTrasladoRegreso()
     {
         getHeadersApi();
 
@@ -422,7 +422,7 @@ class batallonController
         }
 
     }
-    public function guardarTrasladoRegresoComando()
+    public static function guardarTrasladoRegresoComando()
     {
         getHeadersApi();
 
@@ -633,7 +633,7 @@ class batallonController
 
     }
 
-    public function guardarAPIregreso()
+    public static function guardarAPIregreso()
     {
         getHeadersApi();
 
@@ -805,7 +805,7 @@ class batallonController
 
     }
 
-    public function buscarAPI()
+    public static function buscarAPI()
     {
         getHeadersApi();
 
@@ -866,7 +866,7 @@ class batallonController
 
 
     }
-    public function CompaniaTabla()
+    public static function CompaniaTabla()
     {
         getHeadersApi();
 
@@ -929,7 +929,7 @@ class batallonController
 
 
     }
-    public function PelotonTabla()
+    public static function PelotonTabla()
     {
         getHeadersApi();
 
@@ -996,7 +996,7 @@ class batallonController
 
 
 
-    public function buscaringreso()
+    public static function buscaringreso()
     {
         getHeadersApi();
 
@@ -1117,7 +1117,7 @@ class batallonController
 
 
     }
-    public function buscarSalida()
+    public static function buscarSalida()
     {
         getHeadersApi();
 
@@ -1174,7 +1174,7 @@ class batallonController
 
 
 
-    public function buscarRechazo()
+    public static function buscarRechazo()
     {
         getHeadersApi();
 
@@ -1204,7 +1204,7 @@ class batallonController
 
 
     }
-    public function historialFabrica()
+    public static function historialFabrica()
     {
         getHeadersApi();
 
@@ -1260,7 +1260,7 @@ class batallonController
 
 
     }
-    public function buscarSinoptico()
+    public static function buscarSinoptico()
     {
         getHeadersApi();
 
@@ -1320,7 +1320,7 @@ class batallonController
     }
 
 
-    public function modificarAPI()
+    public static function modificarAPI()
     {
         getHeadersApi();
         $batallon = new batallon($_POST);
@@ -1340,7 +1340,7 @@ class batallonController
         }
     }
 
-    public function eliminarAPI()
+    public static function eliminarAPI()
     {
         getHeadersApi();
 
@@ -1374,7 +1374,7 @@ class batallonController
 
 
 
-    public function validarRegistro1()
+    public static function validarRegistro1()
     {
         getHeadersApi();
 
@@ -1405,7 +1405,7 @@ class batallonController
 
         }
     }
-    public function trasladarMunicion3()
+    public static function trasladarMunicion3()
     {
         getHeadersApi();
 
@@ -1428,7 +1428,7 @@ class batallonController
         }
     }
 
-    public function GenerarSalida1()
+    public static function GenerarSalida1()
     {
         getHeadersApi();
 
@@ -1515,7 +1515,7 @@ class batallonController
             ]);
         }
     }
-    public function buscarCompania1()
+    public static function buscarCompania1()
     {
         // hasPermissionApi(['RRMM_COMANDANCI','RRMM_ADMIN','RRMM_DEP_MIL']);
 
@@ -1565,7 +1565,7 @@ class batallonController
 
         echo json_encode($informacion);
     }
-    public function GenerarRegreso1()
+    public static function GenerarRegreso1()
     {
         getHeadersApi();
 

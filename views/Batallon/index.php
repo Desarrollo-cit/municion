@@ -2,7 +2,7 @@
     <div class="col">
         <h3>ALMACEN DE MUNICIÓN DEL BATALLON
             <?= $dependencia ?>
-       
+
         </h3>
     </div>
     <input type="hidden" id="iddependencia" value="<?= $org_dep ?>">
@@ -569,7 +569,7 @@
                                 MOTIVO
                             </label>
                             <!-- <input type="text" id="idmotivo1" name="idmotivo1" class="form-control" required readonly> -->
-                            <input type="hidden" id="motivo1" name="motivo1" class="form-control text-center" required >
+                            <input type="hidden" id="motivo1" name="motivo1" class="form-control text-center" required>
                             <select class="form-control" name="idmotivo1" id="idmotivo1">
                                 <option>Seleccione ...</option>
                                 <?php foreach ($movimiento as $movimiento): ?>
@@ -603,7 +603,7 @@
                             </select>
                         </div>
                         <div class='col-lg-4'>
-                            <label> CANTIDAD A ENVIAR </label>
+                            <label> CANTIDAD A ENVIARr </label>
                             <input type="number" id="cantidadnew1" name="cantidadnew1" class="form-control text-center"
                                 required>
                         </div>
